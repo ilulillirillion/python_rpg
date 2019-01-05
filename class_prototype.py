@@ -15,6 +15,10 @@ import argparse
 import importlib
 
 
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../modules'))
+sys.path.append(lib_path)
+
+
 
 core_class_modules = [ core_class_module for core_class_module in glob.glob('modules/core/class/*') ]
 for core_class_module in core_class_modules:
